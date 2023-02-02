@@ -11,7 +11,7 @@ hexo.extend.filter.register("theme_inject", (injects) => {
     : hexo.theme.config.charts;
   if (!(config && config.enable)) return;
 
-  data = {
+  const data = {
     postsChartTitle: config.posts_title ? config.posts_title : "发布文章统计",
     libUrl: config.libUrl
       ? config.libUrl
@@ -106,7 +106,7 @@ function getPostsCalendar(params) {
     }
   });
 
-  arrayString = JSON.stringify(Array.from(dateMap));
+  const arrayString = JSON.stringify(Array.from(dateMap));
 
   params["range"] = `["${startDate.format("YYYY-MM-DD")}","${endDate.format(
     "YYYY-MM-DD"

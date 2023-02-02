@@ -1,6 +1,6 @@
 {
   "name": "hexo-next-charts",
-  "version": "1.0.0",
+  "version": "0.0.4",
   "description": "Render statistics of hexo poats, categories, and tags into charts.",
   "main": "index.js",
   "scripts": {

@@ -1,0 +1,31 @@
+{
+  "name": "hexo-next-charts",
+  "version": "1.0.0",
+  "description": "Render statistics of hexo poats, categories, and tags into charts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luren-dc/hexo-next-charts.git"
+  },
+  "keywords": [
+    "hexo",
+    "chart",
+    "next",
+    "plugin"
+  ],
+  "author": "luren",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luren-dc/hexo-next-charts/issues"
+  },
+  "homepage": "https://github.com/luren-dc/hexo-next-charts#readme",
+  "devDependencies": {
+    "echarts": "^5.4.1"
+  },
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}

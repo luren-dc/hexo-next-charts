@@ -1,8 +1,9 @@
+"use strict";
 const moment = require("moment");
 const echart = require("./lib/echarts.js");
 const commonCharts = require("./lib/commonCharts.js");
 
-const dayTime = 1000 * 60 * 60 * 24;
+const DAY_TIME = 1000 * 60 * 60 * 24;
 
 hexo.extend.filter.register("theme_inject", (injects) => {
   const config = hexo.config.charts
@@ -72,7 +73,7 @@ function getPostsChart(params) {
 
   const dateMap = new Map();
 
-  for (let time = startDate; time <= endDate; time += dayTime) {
+  for (let time = startDate; time <= endDate; time += DAY_TIME) {
     dateMap.set(moment(time).format("YYYY-M"), 0);
   }
 
@@ -95,7 +96,7 @@ function getPostsCalendar(params) {
 
   const dateMap = new Map();
 
-  for (let time = startDate; time <= endDate; time += dayTime) {
+  for (let time = startDate; time <= endDate; time += DAY_TIME) {
     dateMap.set(moment(time).format("YYYY-MM-DD"), 0);
   }
   posts.forEach((post) => {

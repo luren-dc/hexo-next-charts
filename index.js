@@ -3,27 +3,29 @@ const moment = require("moment");
 const echart = require("./lib/echarts.js");
 const commonCharts = require("./lib/commonCharts.js");
 
+const js = hexo.extend.helper.get("js").bind(hexo);
+
 const DAY_TIME = 1000 * 60 * 60 * 24;
+
+let config;
 
 hexo.extend.filter.register("before_post_render", () => {
   hexo.locals.invalidate();
 });
 
 hexo.extend.filter.register("theme_inject", (injects) => {
-  const config = hexo.config.charts
-    ? hexo.config.charts
-    : hexo.theme.config.charts;
+  config = hexo.config.charts ? hexo.config.charts : hexo.theme.config.charts;
   if (!(config && config.enable)) return;
 
-  const data = {
-    postsChartTitle: config.posts_title ? config.posts_title : "发布文章统计",
-    libUrl: config.libUrl
-      ? config.libUrl
-      : "https://unpkg.com/echarts@5.4.1/dist/echarts.min.js",
-  };
+  const libUrl =
+    config.libUrl || "https://unpkg.com/echarts@5.4.1/dist/echarts.min.js";
+
   injects.head.raw(
     "load-custom-js",
-    `<script src="${data.libUrl}"></script>`,
+    js(libUrl) +
+      "<script>\
+      const darkMode = window.matchMedia('(prefers-color-scheme: dark)');\
+    </script>",
     {},
     { cache: true }
   );
@@ -49,6 +51,7 @@ function processArgs(args, content) {
   params["type"] = params["type"] || "normal";
   params["id"] = `chart-${params["type"]}-${Math.floor(Math.random() * 1000)}`;
   params["pjax"] = hexo.theme.config.pjax;
+  params["darkMode"] = config.darkmode;
   params["width"] = params["width"] || "100%";
   params["height"] = params["height"] || "300px";
   params["renderer"] = params["renderer"] || "canvas";

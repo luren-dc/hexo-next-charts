@@ -81,12 +81,12 @@ e.g.
 
 ### PostsChart
 
-![](./source/postsChart.jpg)
+![](https://github.com/luren-dc/hexo-next-charts/raw/master/source/postsChart.jpg)
 
 ### PostsCalendar
 
-![](./source/postsCalendar.jpg)
+![](https://github.com/luren-dc/hexo-next-charts/raw/master/source/postsCalendar.jpg)
 
 ### TagsChart
 
-![](./source/tagsChart.jpg)
+![](https://github.com/luren-dc/hexo-next-charts/raw/master/source/tagsChart.jpg)

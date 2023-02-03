@@ -8,9 +8,15 @@
 ![NexT v8.14.2](https://img.shields.io/badge/Next-v8.14.2-orange)
 ![size](https://img.shields.io/github/languages/code-size/luren-dc/hexo-next-charts)
 
+English|[简体中文](https://www.luren-dc.top/2023/1a4914a8.html)
+
 **Add chart label for Hexo Next theme**
 
 </div>
+
+> **Note: This plugin may only work properly with the NexT theme**
+
+---
 
 ## Installation
 
@@ -28,6 +34,7 @@ npm install hexo-next-charts --save
 charts:
   enable: true
   libUrl: # Custom Echarts.js CDN URL
+  darkmode: true # Only valid for charts provided by plugin
 ```
 
 ## Usage
@@ -77,6 +84,10 @@ e.g.
 |  theme   |  `String`  |   `"light"`   | [more infomation](https://echarts.apache.org/download-theme.html)  |     Echarts theme      |
 | renderer | `"String"` |  `"canvas"`   |                       `"canvas"`<br>`"svg"`                        |   Echarts rendererr    |
 
+## Demo
+
+[Click to jump](https://www.luren-dc.top/2023/bf0798e0.html)
+
 ## Screenshot
 
 ### PostsChart
@@ -90,3 +101,13 @@ e.g.
 ### TagsChart
 
 ![](https://github.com/luren-dc/hexo-next-charts/raw/master/source/tagsChart.jpg)
+
+## Version Log
+
+- v0.0.5
+  - Fix incomplete statistics of articles
+  - Add darkMode
+- v0.0.4
+  - Rewrite file structure
+- v0.0.3
+  - Add README.md file

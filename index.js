@@ -5,6 +5,10 @@ const commonCharts = require("./lib/commonCharts.js");
 
 const DAY_TIME = 1000 * 60 * 60 * 24;
 
+hexo.extend.filter.register("before_post_render", () => {
+  hexo.locals.invalidate();
+});
+
 hexo.extend.filter.register("theme_inject", (injects) => {
   const config = hexo.config.charts
     ? hexo.config.charts

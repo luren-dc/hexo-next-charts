@@ -14,6 +14,8 @@ English|[简体中文](https://www.luren-dc.top/2023/1a4914a8.html)
 
 </div>
 
+---
+
 > **Note: This plugin may only work properly with the NexT theme**
 
 ---

@@ -8,7 +8,7 @@
 ![NexT v8.14.2](https://img.shields.io/badge/Next-v8.14.2-orange)
 ![size](https://img.shields.io/github/languages/code-size/luren-dc/hexo-next-charts)
 
-English|[简体中文](https://www.luren-dc.top/2023/1a4914a8.html)
+English | [简体中文](https://www.luren-dc.top/2023/1a4914a8.html)
 
 **Add chart label for Hexo Next theme**
 
